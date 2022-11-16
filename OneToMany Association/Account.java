@@ -48,7 +48,7 @@ public class Account
 	public void deposit(double amount)
 	{
 		if(amount>0){
-		balance = balance+amount;
+			balance = balance+amount;
 		}
 		else
 		{
@@ -59,8 +59,8 @@ public class Account
 	public void transfer(Account acc, double amount)
 	{
 		if(amount>0 && (balance-amount)>100){
-		this.balance = this.balance-amount;
-		acc.balance = acc.balance+amount;
+			this.balance = this.balance-amount;
+			acc.balance = acc.balance+amount;
 		}
 		else
 		{
