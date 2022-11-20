@@ -90,5 +90,17 @@ public class Book
         System.out.println("BookName: "+bookName);
         System.out.println("Price: "+price);
         System.out.println("AvailableQuantity: "+availableQuantity);
+        if(standard==0){
+        }
+        else{
+            System.out.println("BookType: TextBook");
+            System.out.println("Standard: "+standard);
+        }
+        if(category==null){
+        }
+        else{
+            System.out.println("BookType: StoryBook");
+            System.out.println("Category: "+category);
+        }
     }
 }

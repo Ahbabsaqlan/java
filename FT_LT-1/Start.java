@@ -40,7 +40,7 @@ public class Start {
         s1.insertBook(b4);
         s1.insertBook(b5);
         s1.removeBook(b3);
-        s1.searchBook("t-5");
+        s1.searchBook("t-8");
         s1.insertBook(b3);
         s1.searchBook("t-1").addQuantity(10);
         s1.searchBook("t-5").sellQuantity(2);
@@ -73,7 +73,7 @@ public class Start {
         System.out.println("BookName: "+b10.getBookName());
         System.out.println("Price: "+b10.getPrice());
         System.out.println("AvailableQuantity: "+b10.getAvailableQuantity());
-        System.out.println("Standard: "+b10.getCategory());
+        System.out.println("Category: "+b10.getCategory());
 
         System.out.println(" ");
         System.out.println("**************************");
