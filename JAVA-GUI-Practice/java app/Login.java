@@ -63,7 +63,6 @@ public class Login implements ActionListener {
         lpass.setForeground(Color.white);
         lreg.setForeground(Color.white);
         frgBtn.setBackground(Color.cyan);
-        lgnBtn.setBorder(new Border(10)); //10 is the radius
 
         Font lFont = lusn.getFont().deriveFont(Font.BOLD, 15f);
         lusn.setFont(lFont);
