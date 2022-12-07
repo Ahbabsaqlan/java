@@ -1,13 +1,20 @@
-import javax.swing.*;  
-import java.awt.event.*;  
+import java.lang.*;
+import javax.swing.*;
+import javax.swing.border.Border;
+import java.awt.*;  
+import java.awt.event.*;
+import java.awt.event.ActionListener;  
 import static javax.swing.JOptionPane.showMessageDialog;
-public class Login implements ActionListener{  
+public class Login implements ActionListener {  
     
 	private JButton lgnBtn;
-    private JButton signBtn;
+    private JButton regBtn;
+    private JButton frgBtn;
     private JButton exBtn;
     private JLabel lusn;
     private JLabel lpass;
+    private JLabel lreg;
+    private JLabel lbgd;
     private JTextField uname;
     private JPasswordField upass;
 	JFrame frame;
@@ -15,32 +22,63 @@ public class Login implements ActionListener{
 	
     Login(){  
 	
-		frame = new JFrame ("System");
-        lgnBtn = new JButton ("Login");
-        signBtn = new JButton ("Sign Up");
-        exBtn = new JButton ("Exit");
-        lusn = new JLabel ("Username");
+		frame = new JFrame ("Login");
+
+        ImageIcon image = new ImageIcon("image/Lbgrnd.png");
+        lbgd = new JLabel(image);
+
+        ImageIcon iconlgn = new ImageIcon("image/login.png");
+        lgnBtn=new JButton(iconlgn);
+
+        ImageIcon iconreg = new ImageIcon("image/register.png");
+        regBtn=new JButton(iconreg);
+
+        frgBtn=new JButton("Forget Your Password");
+        
+        ImageIcon iconext = new ImageIcon("image/extbtn.png");
+        exBtn=new JButton(iconext);
+
+        lusn = new JLabel ("Organisation ID");
         lpass = new JLabel ("Password");
+        lreg = new JLabel ("Not Have Any Account?");
+
         uname = new JTextField ();
         upass = new JPasswordField ();
 
-        lgnBtn.setBounds (150, 185, 100, 30);
-        signBtn.setBounds (305, 185, 100, 30);
-        exBtn.setBounds (205, 235, 140, 30);
-        lusn.setBounds (150, 105, 100, 25);
-        lpass.setBounds (150, 145, 100, 25);
-        uname.setBounds (305, 105, 100, 25);
-        upass.setBounds (305, 145, 100, 25);
+        lgnBtn.setBounds (230, 200, 110, 32);
+        regBtn.setBounds (305, 300, 114, 32);
+        frgBtn.setBounds (195, 250, 180, 25);
+        exBtn.setBounds (500, 25, 24, 22);
+        lusn.setBounds (140, 105, 150, 25);
+        lpass.setBounds (140, 145, 150, 25);
+        lreg.setBounds (150, 300, 200, 30);
+        uname.setBounds (285, 105, 150, 25);
+        upass.setBounds (285, 145, 150, 25);
+        lbgd.setBounds(0, 0, 570, 400);
 		
 		lgnBtn.addActionListener(this);
+        exBtn.addActionListener(this);
+
+        lusn.setForeground(Color.white);
+        lpass.setForeground(Color.white);
+        lreg.setForeground(Color.white);
+        frgBtn.setBackground(Color.cyan);
+        lgnBtn.setBorder(new Border(10)); //10 is the radius
+
+        Font lFont = lusn.getFont().deriveFont(Font.BOLD, 15f);
+        lusn.setFont(lFont);
+        lpass.setFont(lFont);
 
         frame.add (lgnBtn);
-        frame.add (signBtn);
+        frame.add (regBtn);
+        frame.add (frgBtn);
         frame.add (exBtn);
         frame.add (lusn);
         frame.add (lpass);
+        frame.add (lreg);
         frame.add (uname);
         frame.add (upass);
+        frame.add (lbgd);
 
         frame.setSize (570, 400);
 		frame.setLocationRelativeTo(null);
@@ -56,7 +94,7 @@ public class Login implements ActionListener{
 			String user = uname.getText();
 			String pass = upass.getText();
 			
-			if(user.equals("Mazid") && pass.equals("1234"))
+			if(user.equals("admin") && pass.equals("1234"))
 			{
 				new Dashboard();
 				frame.setVisible(false);
@@ -66,9 +104,11 @@ public class Login implements ActionListener{
 			{
 				showMessageDialog(null, "Invalid Username or password!");
 			}
-				
+        }
+        if(e.getSource()==exBtn)
+        {  
+            System.exit(0);
             
-			
         }  
     }  
 } 

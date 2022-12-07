@@ -1,9 +1,11 @@
 import javax.swing.*;
 import java.awt.event.*;
-import java.lang.*;   
+import java.awt.geom.RoundRectangle2D;
+import java.lang.*;
+import static javax.swing.JOptionPane.showMessageDialog;   
 public class Login {  
     public Login() {  
-        JFrame f=new JFrame("First GUI");
+        JFrame f=new JFrame("Login");
         final JTextField t1;
         JLabel l1,l2,l3; 
 
@@ -27,6 +29,11 @@ public class Login {
         Icon icon2 = new ImageIcon("register.png");
         JButton c=new JButton(icon2);  
         c.setBounds(220,250,110,30);
+
+        double x = 50;
+        double y = 50;
+
+        f.setShape(new RoundRectangle2D.Double(x, y, 100, 100, 50, 50));
           
         f.add(l1); 
         f.add(l2);
