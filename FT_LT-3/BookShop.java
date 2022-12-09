@@ -99,7 +99,10 @@ public class BookShop implements IBookShopOperations
 		{
 			if(listOfBooks[i]!=null)
 			{
+				System.out.println("*** Book No:"+(i+1)+" ***");
+				System.out.println(" ");
 				listOfBooks[i].showDetails();
+				System.out.println(" ");
 			}
 		}
 	}
