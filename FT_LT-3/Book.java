@@ -6,8 +6,6 @@ public abstract class Book implements IBookOperations
     private String authorName;
     private double price;
     private int availableQuantity;
-    protected String category;
-    protected int standard;
     
     public Book(){}
     public Book(String isbn,String bookTitle,String authorName,double price,int availableQuantity)
@@ -18,6 +16,8 @@ public abstract class Book implements IBookOperations
         this.price=price;
         this.availableQuantity=availableQuantity;
     }
+
+
     public void setIsbn(String isbn)
     {
         this.isbn=isbn;
@@ -38,14 +38,8 @@ public abstract class Book implements IBookOperations
     {
         this.availableQuantity=availableQuantity;
     }
-    public void setCategory(String category)
-    {
-        this.category=category;
-    }
-    public void setStandard(int standard)
-    {
-        this.standard=standard;
-    }
+    
+
     public String getIsbn()
     {
         return isbn;
@@ -66,15 +60,7 @@ public abstract class Book implements IBookOperations
     {
         return availableQuantity;
     }
-    public int getStandard()
-    {
-        return standard;
-    }
-    public String getCategory()
-    {
-        return category;
-    }
-
+    
 
     public void addQuantity(int amount)
     {

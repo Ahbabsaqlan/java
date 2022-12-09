@@ -4,11 +4,11 @@ public class Start {
     {
         BookShop s1=new BookShop("AIUB BookShop",100);
 
-        Book b1=new TextBook("t-1","English","English For Today",120.40,7,8);
-        Book b2=new TextBook("t-2","Bangla","Bangla Sahitto",200.50,5,10);
-        Book b3=new TextBook("t-3","Mathematics","Shadharon Gonit",350.20,6,7);
-        Book b4=new TextBook("t-4","Physics","Podartho Biggan",560.70,3,5);
-        Book b5=new TextBook();
+        TextBook b1=new TextBook("t-1","English","English For Today",120.40,7,8);
+        TextBook b2=new TextBook("t-2","Bangla","Bangla Sahitto",200.50,5,10);
+        TextBook b3=new TextBook("t-3","Mathematics","Shadharon Gonit",350.20,6,7);
+        TextBook b4=new TextBook("t-4","Physics","Podartho Biggan",560.70,3,5);
+        TextBook b5=new TextBook();
 
         b5.setIsbn("t-5");
         b5.setBookTitle("Chemistry");
@@ -51,11 +51,11 @@ public class Start {
 
         s1.showAllBooks();
 
-        Book b6=new StoryBook("s-1","English Nobel","Romio-Juliet",120.40,7,"Tragidic");
-        Book b7=new StoryBook("s-2","English Drama","Hemlate",200.50,5,"Dramatic");
-        Book b8=new StoryBook("s-3","English Poet","Rose In The Garden",350.20,6,"Poetry");
-        Book b9=new StoryBook("s-4","English History","British Colonization",560.70,3,"Historic");
-        Book b10=new StoryBook();
+        StoryBook b6=new StoryBook("s-1","English Nobel","Romio-Juliet",120.40,7,"Tragidic");
+        StoryBook b7=new StoryBook("s-2","English Drama","Hemlate",200.50,5,"Dramatic");
+        StoryBook b8=new StoryBook("s-3","English Poet","Rose In The Garden",350.20,6,"Poetry");
+        StoryBook b9=new StoryBook("s-4","English History","British Colonization",560.70,3,"Historic");
+        StoryBook b10=new StoryBook();
 
         b10.setIsbn("s-5");
         b10.setBookTitle("English Romantic");
